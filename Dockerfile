@@ -12,7 +12,7 @@ COPY ./mvnw /root
 RUN chmod +x mvnw
 
 
-RUN ./mvnw dependency:go-offline
+RUN ./mvnw dependency:go-offline -DskipTests
 
 COPY ./src /root/src
 
