@@ -1,8 +1,7 @@
 FROM eclipse-temurin:17.0.11_9-jdk
 FROM mysql
 
-ARG PORT=8080
-EXPOSE ${PORT}
+EXPOSE 8080
 
 WORKDIR /root
 
