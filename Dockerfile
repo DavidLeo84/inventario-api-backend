@@ -1,4 +1,5 @@
 FROM eclipse-temurin:17.0.11_9-jdk
+FROM mysql
 
 EXPOSE 8080
 
@@ -8,10 +9,7 @@ COPY ./pom.xml /root
 COPY ./.mvn /root/.mvn
 COPY ./mvnw /root
 
-
-
 RUN chmod +x mvnw
-
 
 RUN ./mvnw dependency:go-offline
 
