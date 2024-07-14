@@ -1,5 +1,5 @@
 FROM eclipse-temurin:17.0.11_9-jdk
-FROM mysql
+
 
 EXPOSE 8080
 
