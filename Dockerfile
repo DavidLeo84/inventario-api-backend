@@ -14,8 +14,8 @@ RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
 COPY ./src /root/src
-COPY target/inventarioApi-0.0.1-SNAPSHOT.jar app.jar
+COPY target/inventarioApi-0.0.1-SNAPSHOT.jar /root/target/app.jar
 
 RUN ./mvnw clean install -DskipTests
 
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","/root/target/app.jar"]
