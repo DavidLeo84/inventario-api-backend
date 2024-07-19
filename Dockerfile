@@ -11,6 +11,8 @@ COPY ./mvnw /root
 
 RUN chmod +x mvnw
 
+FROM mysql:latest
+
 RUN ./mvnw dependency:go-offline
 
 COPY ./src /root/src
